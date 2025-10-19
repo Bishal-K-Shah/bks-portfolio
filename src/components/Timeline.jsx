@@ -10,65 +10,70 @@ const Timeline = () => {
     {
       year: '2024-Present',
       type: 'experience',
-      title: 'Senior Full Stack Developer',
-      company: 'Tech Innovation Labs',
-      description: 'Leading development of scalable web applications using React, Node.js, and cloud technologies. Mentoring junior developers and implementing CI/CD pipelines.',
-      skills: ['React', 'Node.js', 'AWS', 'Docker', 'TypeScript'],
+      title: 'Intern Web Developer',
+      company: 'Clemenger Media Sales',
+      description: 'Developing and maintaining web applications, collaborating with cross-functional teams to deliver high-quality solutions.',
+      skills: ['Wordpress', 'cPanel', 'AWS', 'Docker', 'Network Security', 'Server Administration', 'Cloudflare CDN'],
       achievements: [
         'Improved application performance by 40%',
-        'Led team of 5 developers',
-        'Deployed 15+ production applications'
+        'Reduced infrastructure costs by 35%',
+        'Enhanced website security reducing vulnerabilities by 60%',
+        'Deployed 10+ production websites using AWS and Docker'
       ],
       icon: 'fas fa-briefcase'
     },
     {
-      year: '2023',
+      year: '2025',
       type: 'achievement',
-      title: 'Cloud Solutions Architect Certification',
-      company: 'AWS',
-      description: 'Achieved AWS Solutions Architect Professional certification, demonstrating expertise in designing distributed applications and systems.',
-      skills: ['AWS', 'Cloud Architecture', 'DevOps', 'Infrastructure as Code'],
+      title: 'ACS Professional Year Program',
+      company: 'ECA PY',
+      description: 'Successfully completed AWS Solutions Architect, Docker container, and Network Security courses, gaining practical skills in cloud architecture and cybersecurity.',
+      skills: ['AWS', 'Cloud Architecture', 'DevOps', 'Docker Compose'],
       achievements: [
         'Designed 10+ cloud architectures',
-        'Reduced infrastructure costs by 30%',
-        'Implemented auto-scaling solutions'
+        'Developed auto-scaling solutions',
+        'Achieved AWS Solutions Architect Course Completion',
+        'Achieved Network Security Certification'
       ],
       icon: 'fas fa-cloud'
     },
     {
-      year: '2022-2023',
+      year: '2018-2019',
       type: 'experience',
-      title: 'Full Stack Developer',
-      company: 'Digital Solutions Inc.',
-      description: 'Developed and maintained multiple client projects using modern web technologies. Specialized in creating responsive, user-friendly interfaces.',
-      skills: ['React', 'Vue.js', 'Python', 'Django', 'PostgreSQL'],
+      title: 'Startup Web Developer and Intern',
+      company: 'Hunts Mobile, Stamp & Gold',
+      description: 'Resolved customer inquiries, managed eCommerce orders, and developed website using WordPress and PHP.',
+      skills: ['Inventory Management', 'Ticket Resolution', 'WordPress', 'PHP'],
       achievements: [
+        'Resolved 50+ eCommerce customer inquiries weekly',
+        'Reduced order processing error rates by 15%',
         'Delivered 20+ client projects',
         'Maintained 99.9% uptime',
-        'Improved code quality by implementing testing'
+        'Managed ticket resolutions efficiently using IT service desk operations'
       ],
       icon: 'fas fa-code'
     },
     {
-      year: '2021',
+      year: '2021-2024',
       type: 'achievement',
-      title: 'Full Stack Development Bootcamp',
-      company: 'Tech Academy',
-      description: 'Intensive 6-month program covering modern web development technologies and best practices.',
-      skills: ['JavaScript', 'React', 'Node.js', 'MongoDB', 'Git'],
+      title: 'Bachelor of Information Technology',
+      company: 'Federation University Australia',
+      description: 'Comprehensive degree program covering software development, cybersecurity, database management, and IT project management.',
+      skills: ['JavaScript', 'Python', 'Network Security', 'System Analysis', 'Project Management', 'Cybersecurity'],
       achievements: [
-        'Graduated with honors',
-        'Built 5 full-stack applications',
-        'Completed 500+ coding hours'
+        'Graduated with Distinction',
+        'Completed capstone project on secure web applications',
+        'Dean\'s List for 3 semesters',
+        'Completed cybersecurity specialization track'
       ],
       icon: 'fas fa-graduation-cap'
     },
     {
-      year: '2020',
+      year: '2018-2019',
       type: 'experience',
-      title: 'Junior Web Developer',
-      company: 'StartUp Ventures',
-      description: 'Started my professional journey building responsive websites and learning modern development practices.',
+      title: 'IT Support',
+      company: 'Sapkota & Associates Architect Firm',
+      description: 'Started my professional journey providing in-house IT support, managing network systems, website and software installations.',
       skills: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
       achievements: [
         'Built first production website',
@@ -145,10 +150,6 @@ const Timeline = () => {
               key={index}
               className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}
               variants={itemVariants}
-              whileHover={{ 
-                scale: 1.02,
-                transition: { duration: 0.2 }
-              }}
             >
               <motion.div 
                 className="timeline-marker"
@@ -165,7 +166,12 @@ const Timeline = () => {
               <motion.div 
                 className="timeline-content"
                 whileHover={{ 
+                  scale: 1.02,
                   boxShadow: "0 10px 30px rgba(102, 126, 234, 0.2)"
+                }}
+                transition={{ duration: 0.2 }}
+                style={{
+                  transformOrigin: index % 2 === 0 ? 'right center' : 'left center'
                 }}
               >
                 <div className="timeline-header">

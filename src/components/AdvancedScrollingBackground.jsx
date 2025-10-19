@@ -19,44 +19,101 @@ const AdvancedScrollingBackground = () => {
   })
 
   const techIcons = [
-    { src: awsIcon, alt: 'AWS', color: '#FF9900' },
-    { src: dockerIcon, alt: 'Docker', color: '#2496ED' },
-    { src: phpIcon, alt: 'PHP', color: '#777BB4' },
     { src: reactNativeIcon, alt: 'React Native', color: '#61DAFB' },
+    { src: dockerIcon, alt: 'Docker', color: '#2496ED' },
     { src: wordpressIcon, alt: 'WordPress', color: '#21759B' },
     { src: hubspotIcon, alt: 'HubSpot', color: '#FF7A59' },
-    { src: cpanelIcon, alt: 'cPanel', color: '#FF6C2C' }
+    { src: cpanelIcon, alt: 'cPanel', color: '#FF6C2C' },
+    { src: awsIcon, alt: 'AWS', color: '#FF9900' },
+    { src: phpIcon, alt: 'PHP', color: '#777BB4' }
   ]
 
-  // Generate floating particles - Positioned between Skills and Timeline sections
+  // Generate floating particles with individual control for each icon
   const generateParticles = () => {
-    // Shuffle the icons array to randomize positions
-    const shuffledIcons = [...techIcons].sort(() => Math.random() - 0.5)
-    
-    // Positions distributed vertically between Skills and Timeline sections
-    // Y positions span from middle of Skills to middle of Timeline
-    const positions = [
-      { x: 15, y: 20 },  // Upper area - Skills fade-in zone
-      { x: 85, y: 25 },  // Upper area - Skills fade-in zone
-      { x: 10, y: 40 },  // Mid-upper area
-      { x: 90, y: 45 },  // Mid-upper area
-      { x: 25, y: 60 },  // Center area - maximum visibility
-      { x: 75, y: 65 },  // Center area - maximum visibility
-      { x: 20, y: 80 },  // Mid-lower area
-      { x: 80, y: 85 }   // Lower area - Timeline fade-out zone
+    // Individual configuration for each icon - Easy to customize!
+    const iconConfigs = [
+      // 🔵 React Native - Top left area
+      {
+        icon: techIcons[0],
+        x: 5,           // X position (0-100%)
+        y: 20,          // Y position (0-100%)
+        size: 70,       // Size in pixels
+        speed: 0.3,
+        opacity: 0.5,
+        delay: 0
+      },
+      // 🐳 Docker - Top right area
+      {
+        icon: techIcons[1],
+        x: 75,
+        y: 25,
+        size: 95,
+        speed: 0.45,
+        opacity: 0.6,
+        delay: 0.4
+      },
+      // 📝 WordPress - Left upper-mid area
+      {
+        icon: techIcons[2],
+        x: 22,
+        y: 27,
+        size: 75,
+        speed: 0.6,
+        opacity: 0.5,
+        delay: 0.8
+      },
+      // 🟠 HubSpot - Right mid area
+      {
+        icon: techIcons[3],
+        x: 90,
+        y: 45,
+        size: 65,
+        speed: 0.75,
+        opacity: 0.7,
+        delay: 1.2
+      },
+      // ⚙️ cPanel - Left lower-mid area
+      {
+        icon: techIcons[4],
+        x: 30,
+        y: 50,
+        size: 90,
+        speed: 0.3,
+        opacity: 0.7,
+        delay: 1.6
+      },
+      // ☁️ AWS - Right lower-mid area
+      {
+        icon: techIcons[5],
+        x: 65,
+        y: 60,
+        size: 100,
+        speed: 0.45,
+        opacity: 0.85,
+        delay: 2.0
+      },
+      // 🐘 PHP - Bottom left area
+      {
+        icon: techIcons[6],
+        x: 20,
+        y: 80,
+        size: 80,
+        speed: 0.6,
+        opacity: 0.9,
+        delay: 2.4
+      }
     ]
     
-    return shuffledIcons.map((icon, i) => ({
+    return iconConfigs.map((config, i) => ({
       id: i,
-      icon: icon,
-      x: positions[i].x,
-      y: positions[i].y,
-      size: 65 + (i % 3) * 20, // Sizes: 65px, 85px, 105px
-      speed: 0.3 + (i % 4) * 0.15, // Vary speeds: 0.3, 0.45, 0.6, 0.75
+      icon: config.icon,
+      x: config.x,
+      y: config.y,
+      size: config.size,
+      speed: config.speed,
       rotationSpeed: ((i % 2) - 0.5) * 2.5, // Alternate rotation directions
-      opacity: 0.7 + (i % 3) * 0.1, // Higher opacity: 0.7, 0.8, 0.9
-      delay: i * 0.4, // Stagger animation delays
-      fadeZone: i < 2 || i >= 6 // First 2 and last 2 icons are in fade zones
+      opacity: config.opacity,
+      delay: config.delay
     }))
   }
 
@@ -89,7 +146,7 @@ const AdvancedScrollingBackground = () => {
         {particles.slice(0, 3).map((particle) => (
           <motion.div
             key={`layer1-${particle.id}`}
-            className={`particle ${particle.fadeZone ? "particle-fade-zone" : ""}`}
+            className="particle"
             style={{
               left: `${particle.x}%`,
               top: `${particle.y}%`,
@@ -110,7 +167,7 @@ const AdvancedScrollingBackground = () => {
             }}
             initial={{ opacity: 0, scale: 0, rotate: -180 }}
             whileInView={{ 
-              opacity: particle.fadeZone ? particle.opacity * 0.6 : particle.opacity, 
+              opacity: particle.opacity, 
               scale: 1,
               rotate: 0,
               transition: { 
@@ -154,7 +211,7 @@ const AdvancedScrollingBackground = () => {
         {particles.slice(3, 6).map((particle) => (
           <motion.div
             key={`layer2-${particle.id}`}
-            className={`particle ${particle.fadeZone ? "particle-fade-zone" : ""}`}
+            className="particle"
             style={{
               left: `${particle.x}%`,
               top: `${particle.y + 50}%`,
@@ -175,7 +232,7 @@ const AdvancedScrollingBackground = () => {
             }}
             initial={{ opacity: 0, scale: 0, y: 100 }}
             whileInView={{ 
-              opacity: particle.fadeZone ? particle.opacity * 0.5 : particle.opacity * 0.85, 
+              opacity: particle.opacity * 0.85, 
               scale: 1,
               y: 0,
               transition: { 
@@ -219,7 +276,7 @@ const AdvancedScrollingBackground = () => {
         {particles.slice(6, 8).map((particle) => (
           <motion.div
             key={`layer3-${particle.id}`}
-            className={`particle ${particle.fadeZone ? "particle-fade-zone" : ""}`}
+            className="particle"
             style={{
               left: `${particle.x}%`,
               top: `${particle.y}%`,
@@ -240,7 +297,7 @@ const AdvancedScrollingBackground = () => {
             }}
             initial={{ opacity: 0, scale: 0, x: -100 }}
             whileInView={{ 
-              opacity: particle.fadeZone ? particle.opacity * 0.4 : particle.opacity * 0.75, 
+              opacity: particle.opacity * 0.75, 
               scale: 1,
               x: 0,
               transition: { 
