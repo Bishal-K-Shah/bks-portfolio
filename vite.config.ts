@@ -21,7 +21,7 @@ export default defineConfig({
           vendor: ['react', 'react-dom'],
           three: ['three', '@react-three/fiber', '@react-three/drei'],
           animations: ['framer-motion'],
-          utils: ['@emailjs/browser', 'react-helmet-async']
+          utils: ['@emailjs/browser']
         }
       }
     },

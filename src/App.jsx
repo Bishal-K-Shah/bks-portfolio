@@ -1,5 +1,4 @@
 import { useState, useEffect, Suspense } from 'react'
-import { HelmetProvider } from 'react-helmet-async'
 import { motion } from 'framer-motion'
 import ErrorBoundary from './components/ErrorBoundary'
 import SEOHead from './components/SEOHead'
@@ -41,14 +40,13 @@ function App() {
   }
 
   return (
-    <HelmetProvider>
-      <ErrorBoundary>
-        <div className="app">
-          <SEOHead />
-          
-          <Suspense fallback={<div className="three-loading">Loading 3D environment...</div>}>
-            <ThreeBackground theme={theme} />
-          </Suspense>
+    <ErrorBoundary>
+      <div className="app">
+        <SEOHead />
+        
+        <Suspense fallback={<div className="three-loading">Loading 3D environment...</div>}>
+          <ThreeBackground theme={theme} />
+        </Suspense>
           
           <motion.div 
             className="content"
@@ -88,8 +86,7 @@ function App() {
           </motion.div>
         </div>
       </ErrorBoundary>
-    </HelmetProvider>
-  )
-}
+    )
+  }
 
 export default App
