@@ -127,9 +127,9 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## 📞 Contact
 
 For questions or collaborations, reach out through the contact form on the website or via:
-- Email: contact@yourportfolio.com
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourusername)
-- GitHub: [Your GitHub](https://github.com/yourusername)
+- Email: 
+- LinkedIn: [Your LinkedIn](https://linkedin.com/in/)
+- GitHub: [Your GitHub](https://github.com/)
 
 ---
 
