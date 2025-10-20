@@ -56,7 +56,7 @@ const Timeline = () => {
     {
       year: '2021-2024',
       type: 'achievement',
-      title: 'Bachelor of Information Technology',
+      title: 'IT Degree Completion',
       company: 'Federation University Australia',
       description: 'Comprehensive degree program covering software development, cybersecurity, database management, and IT project management.',
       skills: ['JavaScript', 'Python', 'Network Security', 'System Analysis', 'Project Management', 'Cybersecurity'],
