@@ -13,25 +13,25 @@ const Skills = () => {
       icon: 'fas fa-code',
       title: 'Frontend Development',
       description: 'Modern React, Next.js, and TypeScript applications with responsive design',
-      tags: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion']
+      tags: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS']
     },
     {
       icon: 'fas fa-server',
       title: 'Backend Development',
       description: 'Scalable APIs and microservices with Node.js and cloud technologies',
-      tags: ['Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'REST APIs']
+      tags: ['Node.js', 'Express', 'MySQL', 'REST APIs', 'Serverless functions', 'CI/CD', 'GitHub Actions']
+    },
+        {
+      icon: 'fas fa-cogs',
+      title: 'Content Management System',
+      description: 'Experience with popular CMS platforms for dynamic content management',
+      tags: ['Wordpress', 'Custom CMS', 'Hubspot', 'Strapi']
     },
     {
       icon: 'fas fa-cloud',
-      title: 'DevOps & Cloud',
-      description: 'Infrastructure automation, containerization, and cloud deployment',
-      tags: ['Docker', 'AWS', 'Linux', 'CI/CD', 'Kubernetes']
-    },
-    {
-      icon: 'fas fa-mobile-alt',
-      title: 'Mobile Development',
-      description: 'Cross-platform mobile applications and responsive web solutions',
-      tags: ['React Native', 'PWA', 'Mobile-First', 'Responsive Design']
+      title: 'Cloud and Cybersecurity',
+      description: 'Infrastructure deployment, containerization, and security best practices',
+      tags: ['Docker', 'AWS', 'Linux', 'Router Configuration', 'Firewalls', 'Pen Test']
     }
   ]
 
