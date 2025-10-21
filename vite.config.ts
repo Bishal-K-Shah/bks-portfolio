@@ -20,8 +20,7 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom'],
           three: ['three', '@react-three/fiber', '@react-three/drei'],
-          animations: ['framer-motion'],
-          utils: ['@emailjs/browser']
+          animations: ['framer-motion']
         }
       }
     },

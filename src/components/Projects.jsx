@@ -13,15 +13,15 @@ const Projects = () => {
 
   const projectsData = [
     {
-      id: 1,
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce application with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.",
-      image: "/api/placeholder/400/225",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      category: "fullstack",
-      githubUrl: null,
-      liveUrl: null,
-      featured: true
+      id: 5,
+      title: "Weather Dashboard",
+      description: "Beautiful weather application with location-based forecasts, interactive charts, and responsive design.",
+      image: weatherDashboardImg,
+      technologies: ["React", "Chart.js", "OpenWeather API"],
+      category: "frontend",
+      githubUrl: "https://github.com/Bishal-K-Shah/weather-app",
+      liveUrl: "https://bishalkshah.com.np/weather-app/",
+      featured: false
     },
     {
       id: 2,
@@ -57,15 +57,15 @@ const Projects = () => {
       featured: false
     },
     {
-      id: 5,
-      title: "Weather Dashboard",
-      description: "Beautiful weather application with location-based forecasts, interactive charts, and responsive design.",
-      image: weatherDashboardImg,
-      technologies: ["React", "Chart.js", "OpenWeather API"],
-      category: "frontend",
-      githubUrl: "https://github.com/Bishal-K-Shah/weather-app",
-      liveUrl: "https://bishalkshah.com.np/weather-app/",
-      featured: false
+      id: 1,
+      title: "E-Commerce Platform",
+      description: "Full-stack e-commerce application with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.",
+      image: "/api/placeholder/400/225",
+      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+      category: "fullstack",
+      githubUrl: null,
+      liveUrl: null,
+      featured: true
     },
     {
       id: 6,
@@ -211,7 +211,6 @@ const Projects = () => {
                     {project.liveUrl && (
                       <a 
                         href={project.liveUrl} 
-                        target="_blank" 
                         rel="noopener noreferrer"
                         className="project-link"
                       >
@@ -247,7 +246,7 @@ const Projects = () => {
         <motion.div className="projects-cta" variants={itemVariants}>
           <p>Want to see more of my work?</p>
           <a 
-            href="https://github.com/yourusername" 
+            href="*" 
             target="_blank" 
             rel="noopener noreferrer"
             className="github-btn"
