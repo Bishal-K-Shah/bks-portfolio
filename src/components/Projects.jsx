@@ -21,7 +21,7 @@ const Projects = () => {
       category: "frontend",
       githubUrl: "https://github.com/Bishal-K-Shah/weather-app",
       liveUrl: "https://bishalkshah.com.np/weather-app/",
-      featured: false
+      featured: true
     },
     {
       id: 2,
@@ -32,7 +32,7 @@ const Projects = () => {
       category: "CMS",
       githubUrl: null,
       liveUrl: "https://advridermag.com.au/",
-      featured: true
+      featured: false
     },
     {
       id: 3,
@@ -54,7 +54,7 @@ const Projects = () => {
       category: "CMS",
       githubUrl: null,
       liveUrl: "https://ausmotorcyclist.com.au/",
-      featured: false
+      featured: true
     },
     {
       id: 1,

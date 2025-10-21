@@ -45,7 +45,7 @@ const AdvancedScrollingBackground = () => {
       {
         icon: techIcons[1],
         x: 75,
-        y: 25,
+        y: 33,
         size: 95,
         speed: 0.45,
         opacity: 0.6,
@@ -55,19 +55,19 @@ const AdvancedScrollingBackground = () => {
       {
         icon: techIcons[2],
         x: 22,
-        y: 27,
+        y: 36,
         size: 75,
-        speed: 0.6,
+        speed: 0.75,
         opacity: 0.5,
         delay: 0.8
       },
       // 🟠 HubSpot - Right mid area
       {
         icon: techIcons[3],
-        x: 90,
+        x: 48,
         y: 45,
         size: 65,
-        speed: 0.75,
+        speed: 0.5,
         opacity: 0.7,
         delay: 1.2
       },
@@ -75,7 +75,7 @@ const AdvancedScrollingBackground = () => {
       {
         icon: techIcons[4],
         x: 30,
-        y: 50,
+        y: 55,
         size: 90,
         speed: 0.3,
         opacity: 0.7,
@@ -85,7 +85,7 @@ const AdvancedScrollingBackground = () => {
       {
         icon: techIcons[5],
         x: 65,
-        y: 60,
+        y: 62,
         size: 100,
         speed: 0.45,
         opacity: 0.85,
@@ -95,7 +95,7 @@ const AdvancedScrollingBackground = () => {
       {
         icon: techIcons[6],
         x: 20,
-        y: 80,
+        y: 83,
         size: 80,
         speed: 0.6,
         opacity: 0.9,
