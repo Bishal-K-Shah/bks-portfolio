@@ -1,18 +1,23 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
+// Import project images
+import advRiderMagImg from '../assets/projects/advridermag-ss.png'
+import walkaboutAustraliaImg from '../assets/projects/walkaboutaustralia-ss.png'
+import ausMotorcyclistImg from '../assets/projects/ausmotorcyclist-ss.png'
+import weatherDashboardImg from '../assets/projects/weather-dashboard-ss.png'
+
 const Projects = () => {
   const [projects, setProjects] = useState([])
   const [loading, setLoading] = useState(true)
   const [filter, setFilter] = useState('all')
 
-  // Sample projects data - replace with your actual projects
   const projectsData = [
     {
       id: 1,
       title: "E-Commerce Platform",
       description: "Full-stack e-commerce application with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.",
-      image: "/api/placeholder/400/300",
+      image: "/api/placeholder/400/225",
       technologies: ["React", "Node.js", "MongoDB", "Stripe"],
       category: "fullstack",
       githubUrl: "https://github.com/yourusername/ecommerce-platform",
@@ -21,31 +26,53 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "React-based task management application with drag-and-drop functionality, real-time updates, and team collaboration features.",
-      image: "/api/placeholder/400/300",
-      technologies: ["React", "TypeScript", "Firebase", "Material-UI"],
-      category: "frontend",
-      githubUrl: "https://github.com/yourusername/task-manager",
-      liveUrl: "https://your-task-manager.com",
+      title: "Adventure Rider Magazine",
+      description: "WordPress-based adventure motorcycling magazine featuring expert bike reviews, epic route guides, and gear recommendations for motorcycle enthusiasts in Australia and beyond.",
+      image: advRiderMagImg,
+      technologies: ["WordPress", "PHP", "MySQL", "User Management"],
+      category: "CMS",
+      githubUrl: null,
+      liveUrl: "https://advridermag.com.au/",
       featured: true
     },
     {
       id: 3,
-      title: "Weather Dashboard",
-      description: "Beautiful weather application with location-based forecasts, interactive charts, and responsive design.",
-      image: "/api/placeholder/400/300",
-      technologies: ["React", "Chart.js", "OpenWeather API"],
-      category: "frontend",
-      githubUrl: "https://github.com/yourusername/weather-dashboard",
-      liveUrl: "https://your-weather-app.com",
-      featured: false
+      title: "Walkabout Australia",
+      description: "Cultural WordPress platform supporting Indigenous communities with online shop, donation system, and educational content promoting Aboriginal culture and heritage.",
+      image: walkaboutAustraliaImg,
+      technologies: ["WooCommerce", "PHP", "Payment Gateway"],
+      category: "CMS",
+      githubUrl: null,
+      liveUrl: "https://walkaboutaustralia.org/",
+      featured: true
     },
     {
       id: 4,
+      title: "Australian Motorcyclist",
+      description: "Premier WordPress magazine site for Australian motorcycle enthusiasts featuring latest news, bike reviews, adventure stories, and industry insights.",
+      image: ausMotorcyclistImg,
+      technologies: ["cPanel", "PHP", "MySQL", "Server Management"],
+      category: "CMS",
+      githubUrl: null,
+      liveUrl: "https://ausmotorcyclist.com.au/",
+      featured: false
+    },
+    {
+      id: 5,
+      title: "Weather Dashboard",
+      description: "Beautiful weather application with location-based forecasts, interactive charts, and responsive design.",
+      image: weatherDashboardImg,
+      technologies: ["React", "Chart.js", "OpenWeather API"],
+      category: "frontend",
+      githubUrl: "https://github.com/Bishal-K-Shah/weather-app",
+      liveUrl: "https://bishalkshah.com.np/weather-app/",
+      featured: false
+    },
+    {
+      id: 6,
       title: "REST API Server",
       description: "Scalable Node.js REST API with authentication, rate limiting, and comprehensive documentation.",
-      image: "/api/placeholder/400/300",
+      image: "/api/placeholder/400/225",
       technologies: ["Node.js", "Express", "PostgreSQL", "JWT"],
       category: "backend",
       githubUrl: "https://github.com/yourusername/rest-api",
@@ -53,21 +80,10 @@ const Projects = () => {
       featured: false
     },
     {
-      id: 5,
-      title: "Chat Application",
-      description: "Real-time chat application with Socket.IO, featuring rooms, file sharing, and message history.",
-      image: "/api/placeholder/400/300",
-      technologies: ["React", "Socket.IO", "Node.js", "Redis"],
-      category: "fullstack",
-      githubUrl: "https://github.com/yourusername/chat-app",
-      liveUrl: "https://your-chat-app.com",
-      featured: true
-    },
-    {
-      id: 6,
+      id: 7,
       title: "Data Visualization Tool",
       description: "Interactive data visualization dashboard with multiple chart types and data export functionality.",
-      image: "/api/placeholder/400/300",
+      image: "/api/placeholder/400/225",
       technologies: ["React", "D3.js", "Python", "Flask"],
       category: "fullstack",
       githubUrl: "https://github.com/yourusername/data-viz",
@@ -80,7 +96,8 @@ const Projects = () => {
     { id: 'all', label: 'All Projects' },
     { id: 'fullstack', label: 'Full Stack' },
     { id: 'frontend', label: 'Frontend' },
-    { id: 'backend', label: 'Backend' }
+    { id: 'backend', label: 'Backend' },
+    { id: 'CMS', label: 'CMS' }
   ]
 
   useEffect(() => {

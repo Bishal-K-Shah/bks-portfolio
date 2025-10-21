@@ -773,9 +773,10 @@ footer p {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 380px));
   gap: 2rem;
   margin-bottom: 3rem;
+  justify-content: center;
 }
 
 .project-card {
@@ -785,6 +786,9 @@ footer p {
   overflow: hidden;
   transition: all 0.3s ease;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .project-card.featured {
@@ -794,7 +798,7 @@ footer p {
 
 .project-image {
   position: relative;
-  height: 200px;
+  aspect-ratio: 16/9;
   overflow: hidden;
 }
 
@@ -854,6 +858,9 @@ footer p {
 
 .project-content {
   padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-header {
@@ -883,12 +890,14 @@ footer p {
   color: var(--text-secondary);
   margin-bottom: 1.5rem;
   line-height: 1.6;
+  flex-grow: 1;
 }
 
 .project-tech {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin-top: auto;
 }
 
 .tech-tag {
@@ -950,6 +959,84 @@ footer p {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+/* Projects Responsive Design */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 350px));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 6rem 1rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .filter-tabs {
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .filter-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .project-content {
+    padding: 1.2rem;
+  }
+  
+  .project-header h3 {
+    font-size: 1.2rem;
+  }
+  
+  .project-links {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .project-link {
+    padding: 0.7rem 1rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-section {
+    padding: 4rem 1rem;
+  }
+  
+  .filter-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .filter-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .project-content {
+    padding: 1rem;
+  }
+  
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .tech-tag {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
 }
 
 /* Loading Screen */
