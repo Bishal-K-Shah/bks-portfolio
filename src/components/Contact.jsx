@@ -127,7 +127,7 @@ const Contact = () => {
               </div>
               <div>
                 <h3>Email</h3>
-                <p>bishal.shah2344@gmail.com</p>
+                <p><a href="mailto:bishal.shah2344@gmail.com"> Send me an email</a></p>
               </div>
             </div>
 

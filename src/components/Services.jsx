@@ -19,8 +19,8 @@ const Services = () => {
     },
     {
       icon: 'fas fa-mobile-alt',
-      title: 'Responsive Design',
-      description: 'Beautiful, mobile-first designs that work on any device'
+      title: 'Network Security',
+      description: 'Protecting applications and data from cyber threats'
     }
   ]
 
