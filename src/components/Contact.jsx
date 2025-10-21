@@ -1,9 +1,7 @@
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import { motion } from 'framer-motion'
-import emailjs from '@emailjs/browser'
 
 const Contact = () => {
-  const form = useRef()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -41,6 +39,7 @@ const Contact = () => {
     const validationError = validateForm()
     if (validationError) {
       setSubmitStatus({ type: 'error', message: validationError })
+      setTimeout(() => setSubmitStatus(null), 5000)
       return
     }
 
@@ -48,26 +47,41 @@ const Contact = () => {
     setSubmitStatus(null)
 
     try {
-      // Replace these with your EmailJS credentials
-      await emailjs.sendForm(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID', 
-        form.current,
-        'YOUR_PUBLIC_KEY'
-      )
-      
-      setSubmitStatus({ 
-        type: 'success', 
-        message: 'Message sent successfully! I\'ll get back to you soon.' 
+      const response = await fetch('https://formspree.io/f/xyyqjqwd', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          _replyto: formData.email,
+          _subject: `Portfolio Contact: ${formData.subject}`
+        })
       })
-      setFormData({ name: '', email: '', subject: '', message: '' })
+
+      if (response.ok) {
+        setSubmitStatus({ 
+          type: 'success', 
+          message: '✅ Message sent successfully! I\'ll get back to you soon.' 
+        })
+        setFormData({ name: '', email: '', subject: '', message: '' })
+      } else {
+        const data = await response.json()
+        throw new Error(data.error || 'Failed to send message')
+      }
     } catch (error) {
+      console.error('Form submission error:', error)
       setSubmitStatus({ 
         type: 'error', 
-        message: 'Failed to send message. Please try again later.' 
+        message: '❌ Failed to send message. Please try again or email me directly at bishal.shah2344@gmail.com' 
       })
     } finally {
       setIsSubmitting(false)
+      setTimeout(() => setSubmitStatus(null), 5000)
     }
   }
 
@@ -113,7 +127,7 @@ const Contact = () => {
               </div>
               <div>
                 <h3>Email</h3>
-                <p>contact@yourportfolio.com</p>
+                <p>bishal.shah2344@gmail.com</p>
               </div>
             </div>
 
@@ -145,7 +159,6 @@ const Contact = () => {
           </motion.div>
 
           <motion.form 
-            ref={form}
             className="contact-form" 
             variants={itemVariants}
             onSubmit={handleSubmit}

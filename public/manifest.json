@@ -1,0 +1,18 @@
+{
+  "name": "Bishal Shah - Full Stack Developer Portfolio",
+  "short_name": "BKS Portfolio",
+  "description": "Portfolio of Bishal Shah - Full Stack Developer specializing in React, WordPress, and modern web technologies.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0f23",
+  "theme_color": "#667eea",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -2,7 +2,6 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { useEffect, useState, useRef } from 'react'
 import './scrollingIconbackground.css'
 
-// Import your tech icons from Icons folder
 import awsIcon from '../assets/Icons/icons8-aws-100.png'
 import dockerIcon from '../assets/Icons/icons8-docker-logo-100.png'
 import phpIcon from '../assets/Icons/icons8-php-100.png'

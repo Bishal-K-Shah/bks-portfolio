@@ -1,103 +1,100 @@
-# BKS Portfolio - Security Analyst & Cloud Engineer
+# Portfolio - Bishal K Shah
 
-A modern, interactive portfolio website built with React, Three.js, and Framer Motion. Features immersive 3D backgrounds, smooth animations, and a comprehensive showcase of professional skills and projects.
+Modern portfolio website showcasing professional projects, skills, and experience. Built with React, framer motion and Three.js for an interactive experience.
 
-## 🚀 Features
+## Features
 
-- **Interactive 3D Background** - Particle system powered by Three.js and React Three Fiber
-- **Smooth Animations** - Beautiful transitions using Framer Motion
-- **Dark/Light Theme** - Toggle between themes with persistent storage
-- **Responsive Design** - Optimized for all device sizes
-- **Contact Form** - Integrated with EmailJS for seamless communication
-- **Project Portfolio** - Dynamic project showcase with filtering
-- **SEO Optimized** - Meta tags, structured data, and social sharing
-- **Performance Optimized** - Code splitting, lazy loading, and bundle optimization
-- **Error Boundaries** - Graceful error handling and recovery
-- **TypeScript Ready** - Full TypeScript configuration included
+- Interactive 3D particle background
+- Smooth page transitions and animations
+- Dark/Light theme toggle with local storage
+- Fully responsive design
+- Working contact form (Formspree integration)
+- Project showcase with category filtering
+- Professional timeline
+- SEO optimized
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-- **Frontend**: React 19.1.1, Vite 7.1.7
+- **Frontend**: React 19.1.1
+- **Build Tool**: Vite 7.1.7
 - **3D Graphics**: Three.js, React Three Fiber, Drei
 - **Animations**: Framer Motion
-- **Styling**: CSS3 with CSS Variables
-- **Build Tools**: Vite with optimized configuration
-- **Type Safety**: TypeScript support
-- **Email Service**: EmailJS integration
-- **SEO**: React Helmet Async
+- **Styling**: CSS3 with custom properties
+- **Form Service**: Formspree
+- **Hosting**: GitHub Pages
 
-## 📦 Installation
+## Getting Started
 
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd react_app
-```
+### Installation
 
-2. Install dependencies:
 ```bash
 npm install
 ```
 
-3. Start the development server:
+### Development
+
 ```bash
 npm run dev
 ```
 
-4. Build for production:
+The site will be available at `http://localhost:3000`
+
+### Build
+
 ```bash
 npm run build
 ```
 
-## 🎯 Configuration
+The production build will be generated in the `dist/` folder.
 
-### EmailJS Setup
-1. Create an account at [EmailJS](https://emailjs.com)
-2. Update the EmailJS credentials in `src/components/Contact.jsx`:
-```javascript
-await emailjs.sendForm(
-  'YOUR_SERVICE_ID',     // Replace with your service ID
-  'YOUR_TEMPLATE_ID',    // Replace with your template ID
-  form.current,
-  'YOUR_PUBLIC_KEY'      // Replace with your public key
-)
+### Preview Build
+
+```bash
+npm run preview
 ```
 
-### SEO Configuration
-Update the SEO settings in `src/components/SEOHead.jsx`:
-- Update the domain URL
-- Customize meta descriptions
-- Add social media handles
-- Configure structured data
+## Project Structure
 
-### Project Customization
-Edit the project data in `src/components/Projects.jsx` to showcase your own projects.
+```
+src/
+├── components/          # React components
+│   ├── Header.jsx
+│   ├── Hero.jsx
+│   ├── Skills.jsx
+│   ├── Projects.jsx
+│   ├── Timeline.jsx
+│   ├── Services.jsx
+│   ├── Contact.jsx
+│   └── Footer.jsx
+├── assets/             # Images and icons
+│   ├── Icons/
+│   └── projects/
+├── hooks/              # Custom React hooks
+└── App.jsx             # Main app component
+```
 
-## 🎨 Customization
+## Configuration
+
+### Contact Form
+
+The contact form uses Formspree. To set up:
+
+1. Sign up at [Formspree](https://formspree.io)
+2. Create a new form
+3. Update the endpoint in `src/components/Contact.jsx`
 
 ### Theme Colors
-Modify CSS variables in `src/App.css`:
+
+Customize colors in `src/App.css`:
+
 ```css
 :root {
   --gradient-start: #667eea;
   --gradient-end: #764ba2;
-  /* Add your custom colors */
+  --bg-primary: #0f0f23;
+  --text-primary: #e0e0e0;
 }
 ```
-
-### Content Updates
-- **Hero Section**: Update `src/components/Hero.jsx`
-- **Timeline**: Modify `src/components/Timeline.jsx`
-- **Skills**: Edit `src/components/Skills.jsx`
-- **Services**: Update `src/components/Services.jsx`
-
-## 📱 Responsive Design
-
-The portfolio is fully responsive and optimized for:
-- Desktop (1920px+)
-- Laptop (1024px - 1920px)
-- Tablet (768px - 1024px)
-- Mobile (320px - 768px)
 
 ## 🚀 Performance
 
@@ -112,25 +109,15 @@ The portfolio is fully responsive and optimized for:
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
 - `npm run lint` - Run ESLint
-- `npm run lint:fix` - Fix ESLint issues
-- `npm run type-check` - TypeScript type checking
-- `npm run analyze` - Analyze bundle size
+- `npm run lint:fix` - Auto-fix linting issues
 
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📞 Contact
+## Contact
 
 For questions or collaborations, reach out through the contact form on the website or via:
 - Email: 
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/)
-- GitHub: [Your GitHub](https://github.com/)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/bishal-k-shah/)
+- GitHub: [GitHub](https://github.com/bishal-k-shah)
 
 ---
 
-Built with ❤️ using React and Three.js
+Built with React, Three.js, and Framer Motion

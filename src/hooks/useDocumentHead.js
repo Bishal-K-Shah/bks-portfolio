@@ -9,12 +9,10 @@ export const useDocumentHead = (metadata) => {
     const originalTitle = document.title
     const addedElements = []
 
-    // Update title
     if (metadata.title) {
       document.title = metadata.title
     }
 
-    // Helper function to create and add meta tags
     const addMetaTag = (name, content, property = null) => {
       if (!content) return
 

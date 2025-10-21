@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
-// Import project images
 import advRiderMagImg from '../assets/projects/advridermag-ss.png'
 import walkaboutAustraliaImg from '../assets/projects/walkaboutaustralia-ss.png'
 import ausMotorcyclistImg from '../assets/projects/ausmotorcyclist-ss.png'
@@ -20,8 +19,8 @@ const Projects = () => {
       image: "/api/placeholder/400/225",
       technologies: ["React", "Node.js", "MongoDB", "Stripe"],
       category: "fullstack",
-      githubUrl: "https://github.com/yourusername/ecommerce-platform",
-      liveUrl: "https://your-ecommerce-demo.com",
+      githubUrl: null,
+      liveUrl: null,
       featured: true
     },
     {
@@ -75,7 +74,7 @@ const Projects = () => {
       image: "/api/placeholder/400/225",
       technologies: ["Node.js", "Express", "PostgreSQL", "JWT"],
       category: "backend",
-      githubUrl: "https://github.com/yourusername/rest-api",
+      githubUrl: "*",
       liveUrl: null,
       featured: false
     },
@@ -86,8 +85,8 @@ const Projects = () => {
       image: "/api/placeholder/400/225",
       technologies: ["React", "D3.js", "Python", "Flask"],
       category: "fullstack",
-      githubUrl: "https://github.com/yourusername/data-viz",
-      liveUrl: "https://your-dataviz-tool.com",
+      githubUrl: null,
+      liveUrl: null,
       featured: false
     }
   ]
