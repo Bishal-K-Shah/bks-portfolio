@@ -2,10 +2,10 @@ import { motion } from 'framer-motion'
 
 const Footer = () => {
   const socialLinks = [
-    { icon: 'fab fa-github', href: 'https://github.com', title: 'GitHub' },
-    { icon: 'fab fa-linkedin', href: 'https://linkedin.com', title: 'LinkedIn' },
+    { icon: 'fab fa-github', href: 'https://github.com/bishal-k-shah', title: 'GitHub' },
+    { icon: 'fab fa-linkedin', href: 'https://linkedin.com/in/bishal-k-shah', title: 'LinkedIn' },
     { icon: 'fab fa-twitter', href: 'https://twitter.com', title: 'Twitter' },
-    { icon: 'fas fa-envelope', href: 'mailto:contact@bishalkshah.com.np', title: 'Email' }
+    { icon: 'fas fa-envelope', href: 'mailto:bishal.shah2344@gmail.com', title: 'Email' }
   ]
 
   return (
@@ -40,7 +40,7 @@ const Footer = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        &copy; 2025 Bishal K Shah. All rights reserved.
+        &copy; 2025 Bishal Shah. All rights reserved.
       </motion.p>
     </footer>
   )
