@@ -659,6 +659,19 @@ footer p {
   margin: 0;
 }
 
+.contact-item p a {
+  color: var(--gradient-start);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.contact-item p a:hover {
+  color: var(--gradient-end);
+  text-decoration: underline;
+}
+
 .contact-form {
   background: var(--bg-card);
   padding: 2.5rem;
