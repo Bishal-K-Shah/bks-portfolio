@@ -18,9 +18,9 @@ const Timeline = () => {
         'Improved application performance by 40%',
         'Reduced infrastructure costs by 35%',
         'Enhanced website security reducing vulnerabilities by 60%',
-        'Deployed 10+ production websites using AWS and Docker'
+        'Deployed 10+ production websites using DigitalOcean Cloud and Docker'
       ],
-      icon: 'fas fa-briefcase'
+      icon: 'fas fa-shield-alt'
     },
     {
       year: '2025',
@@ -51,7 +51,7 @@ const Timeline = () => {
         'Maintained 99.9% uptime',
         'Managed ticket resolutions efficiently using IT service desk operations'
       ],
-      icon: 'fas fa-code'
+      icon: 'fas fa-briefcase'
     },
     {
       year: '2021-2024',

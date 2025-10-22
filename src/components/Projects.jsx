@@ -5,6 +5,7 @@ import advRiderMagImg from '../assets/projects/advridermag-ss.png'
 import walkaboutAustraliaImg from '../assets/projects/walkaboutaustralia-ss.png'
 import ausMotorcyclistImg from '../assets/projects/ausmotorcyclist-ss.png'
 import weatherDashboardImg from '../assets/projects/weather-dashboard-ss.png'
+import ausDataVizImg from '../assets/projects/aus-data-viz-ss.png'
 
 const Projects = () => {
   const [projects, setProjects] = useState([])
@@ -21,7 +22,8 @@ const Projects = () => {
       category: "frontend",
       githubUrl: "https://github.com/Bishal-K-Shah/weather-app",
       liveUrl: "https://bishalkshah.com.np/weather-app/",
-      featured: true
+      featured: true,
+      show: true
     },
     {
       id: 2,
@@ -32,7 +34,8 @@ const Projects = () => {
       category: "CMS",
       githubUrl: null,
       liveUrl: "https://advridermag.com.au/",
-      featured: false
+      featured: false,
+      show: true
     },
     {
       id: 3,
@@ -43,7 +46,20 @@ const Projects = () => {
       category: "CMS",
       githubUrl: null,
       liveUrl: "https://walkaboutaustralia.org/",
-      featured: true
+      featured: true,
+      show: true
+    },
+    {
+      id: 7,
+      title: "Data Analytics Visualization",
+      description: "Australian business data visualization and analytics dashboard with multiple chart types and data export functionality.",
+      image: ausDataVizImg,
+      technologies: ["Vanilla JS", "Chart.js", "jsPDF"],
+      category: "frontend",
+      githubUrl: null,
+      liveUrl: null,
+      featured: true,
+      show: true
     },
     {
       id: 4,
@@ -54,7 +70,8 @@ const Projects = () => {
       category: "CMS",
       githubUrl: null,
       liveUrl: "https://ausmotorcyclist.com.au/",
-      featured: true
+      featured: true,
+      show: true
     },
     {
       id: 1,
@@ -65,7 +82,8 @@ const Projects = () => {
       category: "fullstack",
       githubUrl: null,
       liveUrl: null,
-      featured: true
+      featured: false,
+      show: false
     },
     {
       id: 6,
@@ -76,19 +94,9 @@ const Projects = () => {
       category: "backend",
       githubUrl: "*",
       liveUrl: null,
-      featured: false
+      featured: false,
+      show: false
     },
-    {
-      id: 7,
-      title: "Data Visualization Tool",
-      description: "Interactive data visualization dashboard with multiple chart types and data export functionality.",
-      image: "/api/placeholder/400/225",
-      technologies: ["React", "D3.js", "Python", "Flask"],
-      category: "fullstack",
-      githubUrl: null,
-      liveUrl: null,
-      featured: false
-    }
   ]
 
   const categories = [
@@ -108,8 +116,8 @@ const Projects = () => {
   }, [])
 
   const filteredProjects = filter === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === filter)
+    ? projects.filter(project => project.show) 
+    : projects.filter(project => project.category === filter && project.show)
 
   const containerVariants = {
     hidden: { opacity: 0 },

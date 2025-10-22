@@ -18,7 +18,7 @@ const Services = () => {
       description: 'Scalable cloud infrastructure and deployment automation'
     },
     {
-      icon: 'fas fa-mobile-alt',
+      icon: 'fas fa-shield-alt',
       title: 'Network Security',
       description: 'Protecting applications and data from cyber threats'
     }
