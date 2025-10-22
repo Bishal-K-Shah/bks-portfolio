@@ -56,8 +56,8 @@ const Projects = () => {
       image: ausDataVizImg,
       technologies: ["Vanilla JS", "Chart.js", "jsPDF"],
       category: "frontend",
-      githubUrl: null,
-      liveUrl: null,
+      githubUrl: "https://github.com/Bishal-K-Shah/aus-biz-data-viz",
+      liveUrl: "https://bishalkshah.com.np/aus-biz-data-viz/",
       featured: true,
       show: true
     },
