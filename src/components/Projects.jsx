@@ -254,7 +254,7 @@ const Projects = () => {
         <motion.div className="projects-cta" variants={itemVariants}>
           <p>Want to see more of my work?</p>
           <a 
-            href="*" 
+            href="https://github.com/bishal-k-shah" 
             target="_blank" 
             rel="noopener noreferrer"
             className="github-btn"
