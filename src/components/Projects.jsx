@@ -19,7 +19,7 @@ const Projects = () => {
       description: "Beautiful weather application with location-based forecasts, interactive charts, and responsive design.",
       image: weatherDashboardImg,
       technologies: ["React", "Chart.js", "OpenWeather API"],
-      category: "frontend",
+      categories: ["frontend", "backend"],
       githubUrl: "https://github.com/Bishal-K-Shah/weather-app",
       liveUrl: "https://bishalkshah.com.np/weather-app/",
       featured: true,
@@ -31,7 +31,7 @@ const Projects = () => {
       description: "WordPress-based adventure motorcycling magazine featuring expert bike reviews, epic route guides, and gear recommendations for motorcycle enthusiasts in Australia and beyond.",
       image: advRiderMagImg,
       technologies: ["WordPress", "PHP", "MySQL", "User Management"],
-      category: "CMS",
+      categories: ["CMS", "frontend"],
       githubUrl: null,
       liveUrl: "https://advridermag.com.au/",
       featured: false,
@@ -43,7 +43,7 @@ const Projects = () => {
       description: "Cultural WordPress platform supporting Indigenous communities with online shop, donation system, and educational content promoting Aboriginal culture and heritage.",
       image: walkaboutAustraliaImg,
       technologies: ["WooCommerce", "PHP", "Payment Gateway"],
-      category: "CMS",
+      categories: ["CMS", "frontend"],
       githubUrl: null,
       liveUrl: "https://walkaboutaustralia.org/",
       featured: true,
@@ -55,7 +55,7 @@ const Projects = () => {
       description: "Australian business data visualization and analytics dashboard with multiple chart types and data export functionality.",
       image: ausDataVizImg,
       technologies: ["Vanilla JS", "Chart.js", "jsPDF"],
-      category: "frontend",
+      categories: ["frontend"],
       githubUrl: "https://github.com/Bishal-K-Shah/aus-biz-data-viz",
       liveUrl: "https://bishalkshah.com.np/aus-biz-data-viz/",
       featured: true,
@@ -67,7 +67,7 @@ const Projects = () => {
       description: "Premier WordPress magazine site for Australian motorcycle enthusiasts featuring latest news, bike reviews, adventure stories, and industry insights.",
       image: ausMotorcyclistImg,
       technologies: ["cPanel", "PHP", "MySQL", "Server Management"],
-      category: "CMS",
+      categories: ["CMS", "frontend"],
       githubUrl: null,
       liveUrl: "https://ausmotorcyclist.com.au/",
       featured: true,
@@ -79,7 +79,7 @@ const Projects = () => {
       description: "Full-stack e-commerce application with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.",
       image: "/api/placeholder/400/225",
       technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      category: "fullstack",
+      categories: ["fullstack"],
       githubUrl: null,
       liveUrl: null,
       featured: false,
@@ -91,7 +91,7 @@ const Projects = () => {
       description: "Scalable Node.js REST API with authentication, rate limiting, and comprehensive documentation.",
       image: "/api/placeholder/400/225",
       technologies: ["Node.js", "Express", "PostgreSQL", "JWT"],
-      category: "backend",
+      categories: ["backend"],
       githubUrl: "*",
       liveUrl: null,
       featured: false,
@@ -117,7 +117,7 @@ const Projects = () => {
 
   const filteredProjects = filter === 'all' 
     ? projects.filter(project => project.show) 
-    : projects.filter(project => project.category === filter && project.show)
+    : projects.filter(project => project.categories.includes(filter) && project.show)
 
   const containerVariants = {
     hidden: { opacity: 0 },
