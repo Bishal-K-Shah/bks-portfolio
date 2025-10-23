@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bishal-k-shah.github.io/sitemap.xml
+Sitemap: https://bishalkshah.com.np/sitemap.xml
