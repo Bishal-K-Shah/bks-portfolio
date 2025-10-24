@@ -367,7 +367,7 @@ header {
 
 /* Timeline Section */
 .timeline-section {
-  padding: 5rem 2rem;
+  padding: 5rem 1rem;
   background: var(--bg-secondary);
   backdrop-filter: blur(10px);
 }
@@ -1172,11 +1172,11 @@ footer p {
   }
   
   .filter-btn {
-    padding: 0.4rem 0.75rem;
-    font-size: 0.75rem;
+    padding: 0.7rem 1.3rem;
+    font-size: 1rem;
     white-space: nowrap;
     flex-shrink: 0;
-    border-radius: 20px;
+    border-radius: 22px;
   }
   
   .project-content {
