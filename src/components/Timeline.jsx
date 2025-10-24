@@ -12,22 +12,22 @@ const Timeline = () => {
       type: 'experience',
       title: 'Intern Web Developer',
       company: 'Clemenger Media Sales',
-      description: 'Developing and maintaining web applications, collaborating with cross-functional teams to deliver high-quality solutions.',
+      description: 'Developing and maintaining web applications, collaborating with cross-functional teams to deliver quality solutions.',
       skills: ['Wordpress', 'cPanel', 'AWS', 'Docker', 'Network Security', 'Server Administration', 'Cloudflare CDN'],
       achievements: [
         'Improved application performance by 40%',
         'Reduced infrastructure costs by 35%',
-        'Enhanced website security reducing vulnerabilities by 60%',
+        'Websites malware cleanup and security hardening reducing vulnerabilities by 60%',
         'Deployed 10+ production websites using DigitalOcean Cloud and Docker'
       ],
       icon: 'fas fa-shield-alt'
     },
     {
-      year: '2025',
+      year: '2024-2025',
       type: 'achievement',
       title: 'ACS Professional Year Program',
       company: 'ECA PY',
-      description: 'Successfully completed AWS Solutions Architect, Docker container, and Network Security courses, gaining practical skills in cloud architecture and cybersecurity.',
+      description: 'Completed AWS Solutions Architect, Docker container, and Network Security courses, while gaining practical skills in cloud architecture and cybersecurity.',
       skills: ['AWS', 'Cloud Architecture', 'DevOps', 'Docker Compose'],
       achievements: [
         'Designed 10+ cloud architectures',
@@ -64,7 +64,7 @@ const Timeline = () => {
         'Graduated with Distinction',
         'Completed capstone project on secure web applications',
         'Dean\'s List for 3 semesters',
-        'Completed cybersecurity specialization track'
+        'Completed Scrum training and cybersecurity specialization track',
       ],
       icon: 'fas fa-graduation-cap'
     },
@@ -77,7 +77,7 @@ const Timeline = () => {
       skills: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
       achievements: [
         'Built first production website',
-        'Learned agile methodology',
+        'Set up office network infrastructure',
         'Created 10+ landing pages'
       ],
       icon: 'fas fa-rocket'

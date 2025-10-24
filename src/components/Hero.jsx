@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
-const phrases = ['& Security Analyst', '& Cloud Engineer', '& Problem Solver', '& Creative Thinker']
+const phrases = ['& Problem Solver', '& Network Security Analyst', '& Cloud Architect']
 
 const Hero = () => {
   const [typedText, setTypedText] = useState('')
@@ -73,7 +73,7 @@ const Hero = () => {
         </motion.h2>
         <motion.p variants={itemVariants}>
           Crafting seamless digital experiences with modern web technologies.
-          Specializing in scalable applications, cloud infrastructure, and creative solutions.
+          Specializing in scalable applications, network security and cloud infrastructure.
         </motion.p>
         <motion.div 
           className="cta-buttons"

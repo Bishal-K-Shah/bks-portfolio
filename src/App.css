@@ -601,6 +601,10 @@ header {
   .timeline-content::before {
     display: none;
   }
+
+  .timeline-content {
+    padding: 1rem;
+  }
   
   .timeline-header {
     flex-direction: column;
@@ -650,14 +654,17 @@ footer p {
   }
   
   .nav-container {
-    justify-content: space-between;
+    justify-content: center;
     position: relative;
   }
-  
   .logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    position: static;
+    left: auto;
+    transform: none;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .theme-toggle {

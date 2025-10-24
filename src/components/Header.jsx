@@ -74,7 +74,7 @@ const Header = ({ theme, toggleTheme }) => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          BKS
+          BKS Portfolio
         </motion.div>
         <nav>
           <ul className="nav-links">
